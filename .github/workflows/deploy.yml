@@ -1,0 +1,20 @@
+name: Terraform workflow
+on:
+  push
+
+jobs:
+   AWS_Configure:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout
+         uses: actions/checkout@v3
+
+       - name: Java installation
+         uses: actions/setup-java@v3
+         
+       - name: Configure AWS credentials
+         uses: aws-actions/configure-aws-credentials@v1
+         with:
+           aws-access-key-id: jhfkasdhvsjkdhvsguifg
+           aws-secret-access-key: dhfhdhdghgdgndfgnd
+           aws-region: ap-southeast-1
