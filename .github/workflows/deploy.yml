@@ -9,7 +9,7 @@ jobs:
        - name: Checkout
          uses: actions/checkout@v3
        - name: List of files  
-         run: ls
+         run: pwd
 
        # - name: Java installation
        #   uses: actions/setup-java@v3
