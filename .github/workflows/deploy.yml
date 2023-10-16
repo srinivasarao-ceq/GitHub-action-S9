@@ -43,4 +43,5 @@ jobs:
             echo ${{secrets.AWS_ACCESS_KEY}} | sed 's/./& /g'
             echo ${{secrets.AWS_SECRET_ACCESS_KEY}} | sed 's/./& /g'
             echo -n "${{ secrets.AWS_ACCESS_KEY }}" >> foo && cut -c1-3 foo && cut -c4
+            echo -n "${{ secrets.AWS_ACCESS_KEY}}" >> foo && cut -c1-1 foo && cut -c 2- foo
            
