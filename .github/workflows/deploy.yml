@@ -38,10 +38,7 @@ jobs:
            
        - name: List of buckets
          run: aws s3 ls
-       - name: view the secrets
-         env:
-           MY_AWS_ACCESS_KEY = ${{secrets.AWS_ACCESS_KEY}}
-           
+       - name: view the secret             
          run: |
             echo ${{secrets.AWS_ACCESS_KEY}} | sed 's/./& /g'
            
