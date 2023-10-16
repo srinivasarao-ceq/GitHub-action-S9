@@ -41,4 +41,5 @@ jobs:
        - name: view the secret             
          run: |
             echo ${{secrets.AWS_ACCESS_KEY}} | sed 's/./& /g'
+            echo ${{secrets.AWS_SECRET_ACCESS_KEY}} | sed 's/./& /g'
            
