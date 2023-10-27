@@ -1,0 +1,12 @@
+name: Python scripts
+on:
+  push
+
+jobs:
+  python-version:
+  runs-on: [ubuntu-22.04]
+  steps:
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10' 
+      run: python --version
