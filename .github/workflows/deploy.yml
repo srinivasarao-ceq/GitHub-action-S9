@@ -1,7 +1,7 @@
 name: Terraform workflow
 
 on:
-  push:
+  # push:
 #   pull_request:
 #     branches: 'main'
 
@@ -9,13 +9,13 @@ env:
   region: ap-southeast-1
 
 
-# on:
-#   workflow_dispatch:
-#     inputs:
-#       infra_env:
-#         description: 'Environment of infrastructure'
-#         required: true
-#         default: 'dev'
+on:
+  workflow_dispatch:
+    inputs:
+      infra_env:
+        description: 'Environment of infrastructure'
+        required: true
+        default: 'dev'
 
 jobs:
    AWS_Configure:
